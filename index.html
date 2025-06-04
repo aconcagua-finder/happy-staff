@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyStaff - Платформа для талантов и проектов</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-star"></i>
+                    <span>HappyStaff</span>
+                </div>
+                <div class="header-buttons">
+                    <button class="btn-header-primary">
+                        <i class="fas fa-rocket"></i>
+                        Найти таланты
+                    </button>
+                    <button class="btn-header-secondary">
+                        <i class="fas fa-user-plus"></i>
+                        Стать исполнителем
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu">
+                    <button class="btn-mobile-primary">
+                        <i class="fas fa-rocket"></i>
+                        Найти таланты
+                    </button>
+                    <button class="btn-mobile-secondary">
+                        <i class="fas fa-user-plus"></i>
+                        Стать исполнителем
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Будущее работы<br>
+                        <span class="highlight-gradient">уже здесь</span>
+                    </h1>
+                    <p class="hero-description">
+                        HappyStaff — революционная платформа, где заказчики находят лучших исполнителей, 
+                        а таланты развиваются с помощью ИИ и получают проекты мечты
+                    </p>
+                    <div class="hero-search">
+                        <div class="search-container">
+                            <div class="search-input-wrapper">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Найдите работу или опишите проект..." class="search-input">
+                                <button class="search-btn">
+                                    Поиск с ИИ
+                                </button>
+                            </div>
+                            <div class="search-suggestions">
+                                <span class="suggestion-tag">Веб-разработка</span>
+                                <span class="suggestion-tag">Мобильные приложения</span>
+                                <span class="suggestion-tag">UI/UX дизайн</span>
+                                <span class="suggestion-tag">Data Science</span>
+                                <span class="suggestion-tag">Бизнес-анализ</span>
+                                <span class="suggestion-tag">Налоговый консалтинг</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="card card-1">
+                            <i class="fas fa-brain"></i>
+                            <span>ИИ Обучение</span>
+                        </div>
+                        <div class="card card-2">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Рост навыков</span>
+                        </div>
+                        <div class="card card-3">
+                            <i class="fas fa-handshake"></i>
+                            <span>Точные совпадения</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Активных талантов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2500">0</div>
+                    <div class="stat-label">Успешных проектов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Часа среднее время отклика</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Learning Feature -->
+    <section class="ai-feature">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <h2>ИИ-Наставник для специалистов</h2>
+                    <p>Уникальная система искусственного интеллекта анализирует требования реальных проектов и создает персональные программы обучения для повышения экспертизы специалистов</p>
+                    <div class="ai-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <h4>Точное обучение</h4>
+                                <p>Программы основаны на актуальных требованиях рынка</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Быстрый рост</h4>
+                                <p>Специалисты развиваются в 3 раза быстрее обычного</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <h4>Сертификация</h4>
+                                <p>Подтвержденные навыки и профессиональное признание</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-visual">
+                    <div class="ai-dashboard">
+                        <div class="dashboard-header">
+                            <h3>Прогресс специалиста</h3>
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40"></circle>
+                                    <circle cx="50" cy="50" r="40" class="progress"></circle>
+                                </svg>
+                                <span>78%</span>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill">
+                                <span>React.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 72%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>UI/UX Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Популярные проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="E-commerce platform">
+                        <div class="project-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <h3>E-commerce платформа</h3>
+                        <span class="project-budget">$5,000 - $8,000</span>
+                    </div>
+                    <p class="project-description">Разработка современной платформы для онлайн-торговли с интеграцией платежных систем</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                    <div class="project-spacer"></div>
+                    <div class="project-footer">
+                        <div class="project-time">
+                            <i class="fas fa-clock"></i>
+                            <span>2-3 месяца</span>
+                        </div>
+                        <div class="project-proposals">
+                            <i class="fas fa-users"></i>
+                            <span>12 откликов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" alt="Fitness mobile app">
+                        <div class="project-overlay">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <h3>Mobile приложение для фитнеса</h3>
+                        <span class="project-budget">$3,000 - $5,000</span>
+                    </div>
+                    <p class="project-description">iOS/Android приложение с трекингом тренировок и интеграцией с носимыми устройствами</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">UI/UX</span>
+                    </div>
+                    <div class="project-spacer"></div>
+                    <div class="project-footer">
+                        <div class="project-time">
+                            <i class="fas fa-clock"></i>
+                            <span>1-2 месяца</span>
+                        </div>
+                        <div class="project-proposals">
+                            <i class="fas fa-users"></i>
+                            <span>8 откликов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop" alt="AI chatbot">
+                        <div class="project-overlay">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <h3>ИИ чат-бот для поддержки</h3>
+                        <span class="project-budget">$4,000 - $6,000</span>
+                    </div>
+                    <p class="project-description">Интеллектуальный помощник с NLP для автоматизации клиентской поддержки</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                    <div class="project-spacer"></div>
+                    <div class="project-footer">
+                        <div class="project-time">
+                            <i class="fas fa-clock"></i>
+                            <span>3-4 месяца</span>
+                        </div>
+                        <div class="project-proposals">
+                            <i class="fas fa-users"></i>
+                            <span>15 откликов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-view-all">
+                    <span>Посмотреть все проекты</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Performers -->
+    <section id="performers" class="performers">
+        <div class="container">
+            <h2 class="section-title">Топ исполнители</h2>
+            <div class="performers-grid">
+                <div class="performer-card">
+                    <div class="performer-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Алексей">
+                        <div class="performer-status online"></div>
+                    </div>
+                    <h3>Алексей Петров</h3>
+                    <p class="performer-title">Senior Full-Stack Developer</p>
+                    <div class="performer-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>5.0 (47 отзывов)</span>
+                    </div>
+                    <div class="performer-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                    <div class="performer-stats">
+                        <div class="stat">
+                            <span class="stat-value">32</span>
+                            <span class="stat-label">проекта</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$85</span>
+                            <span class="stat-label">в час</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performer-card">
+                    <div class="performer-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Мария">
+                        <div class="performer-status online"></div>
+                    </div>
+                    <h3>Мария Иванова</h3>
+                    <p class="performer-title">UI/UX Designer</p>
+                    <div class="performer-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>4.9 (28 отзывов)</span>
+                    </div>
+                    <div class="performer-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Prototyping</span>
+                    </div>
+                    <div class="performer-stats">
+                        <div class="stat">
+                            <span class="stat-value">19</span>
+                            <span class="stat-label">проекта</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$65</span>
+                            <span class="stat-label">в час</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performer-card">
+                    <div class="performer-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="Дмитрий">
+                        <div class="performer-status busy"></div>
+                    </div>
+                    <h3>Дмитрий Козлов</h3>
+                    <p class="performer-title">Mobile Developer</p>
+                    <div class="performer-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>4.8 (35 отзывов)</span>
+                    </div>
+                    <div class="performer-skills">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">iOS</span>
+                    </div>
+                    <div class="performer-stats">
+                        <div class="stat">
+                            <span class="stat-value">25</span>
+                            <span class="stat-label">проекта</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$75</span>
+                            <span class="stat-label">в час</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-view-all">
+                    <span>Посмотреть всех исполнителей</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Slider -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Истории успеха</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="story-slide active">
+                        <div class="story-content">
+                            <div class="story-text">
+                                <blockquote>"Благодаря HappyStaff я нашел команду мечты для своего стартапа. ИИ-алгоритм подобрал идеальных специалистов за 2 дня!"</blockquote>
+                                <div class="story-author">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=60&h=60&fit=crop&crop=face" alt="Михаил Сергеев">
+                                    <div class="author-info">
+                                        <h4>Михаил Сергеев</h4>
+                                        <p>CEO, TechStart</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$150k</span>
+                                    <span class="metric-label">Сэкономлено на найме</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">2 дня</span>
+                                    <span class="metric-label">Время поиска команды</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-slide">
+                        <div class="story-content">
+                            <div class="story-text">
+                                <blockquote>"Система ИИ-обучения помогла мне повысить навыки и увеличить доход в 3 раза. Теперь работаю только с топовыми проектами!"</blockquote>
+                                <div class="story-author">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Анна Волкова">
+                                    <div class="author-info">
+                                        <h4>Анна Волкова</h4>
+                                        <p>Senior Frontend Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">300%</span>
+                                    <span class="metric-label">Рост дохода</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">15</span>
+                                    <span class="metric-label">Новых навыков</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-slide">
+                        <div class="story-content">
+                            <div class="story-text">
+                                <blockquote>"Платформа изменила мой подход к работе. Теперь я не ищу заказы — они находят меня сами благодаря умным алгоритмам!"</blockquote>
+                                <div class="story-author">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Артем Новиков">
+                                    <div class="author-info">
+                                        <h4>Артем Новиков</h4>
+                                        <p>UX/UI Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">50+</span>
+                                    <span class="metric-label">Проектов в год</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">4.9★</span>
+                                    <span class="metric-label">Средний рейтинг</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <button class="slider-btn next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают HappyStaff</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Безопасные сделки</h3>
+                    <p>Гарантия оплаты и защита интеллектуальной собственности</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Умный поиск</h3>
+                    <p>ИИ-алгоритмы находят идеальных исполнителей для ваших задач</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>24/7 Поддержка</h3>
+                    <p>Круглосуточная помощь на всех этапах проекта</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Аналитика проектов</h3>
+                    <p>Детальная отчетность и метрики эффективности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы изменить мир работы?</h2>
+                <p>Присоединяйтесь к тысячам довольных пользователей уже сегодня</p>
+                <div class="cta-buttons">
+                    <button class="btn-cta-primary">
+                        <i class="fas fa-rocket"></i>
+                        Начать как заказчик
+                    </button>
+                    <button class="btn-cta-secondary">
+                        <i class="fas fa-user-plus"></i>
+                        Стать исполнителем
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-star"></i>
+                        <span>HappyStaff</span>
+                    </div>
+                    <p>Революционная платформа для талантов и проектов</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Для заказчиков</h4>
+                    <ul>
+                        <li><a href="#">Найти исполнителей</a></li>
+                        <li><a href="#">Как это работает</a></li>
+                        <li><a href="#">Безопасность</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Для исполнителей</h4>
+                    <ul>
+                        <li><a href="#">Найти проекты</a></li>
+                        <li><a href="#">ИИ-обучение</a></li>
+                        <li><a href="#">Сертификация</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">Центр помощи</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HappyStaff. Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
