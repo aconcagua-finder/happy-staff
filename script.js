@@ -133,51 +133,7 @@ window.addEventListener('scroll', () => {
 
 // Hero title animation (removed typing effect for better performance)
 
-// Button click animations
-document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function(e) {
-        // Create ripple effect
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-        
-        this.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
-    });
-});
-
-// Add ripple CSS dynamically
-const rippleCSS = `
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-`;
-
-const style = document.createElement('style');
-style.textContent = rippleCSS;
-document.head.appendChild(style);
+// Button click animations removed for better UX
 
 // Skill bars animation
 const skillBarsObserver = new IntersectionObserver((entries) => {
@@ -196,6 +152,69 @@ const aiDashboard = document.querySelector('.ai-dashboard');
 if (aiDashboard) {
     skillBarsObserver.observe(aiDashboard);
 }
+
+// Category tabs functionality for Search & Categories section
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const categoryGrids = document.querySelectorAll('.category-grid');
+
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and grids
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            categoryGrids.forEach(g => g.classList.remove('active'));
+
+            // Add active class to clicked tab
+            tab.classList.add('active');
+
+            // Show corresponding grid
+            const targetCategory = tab.getAttribute('data-category');
+            const targetGrid = document.getElementById(targetCategory);
+            if (targetGrid) {
+                targetGrid.classList.add('active');
+            }
+        });
+    });
+
+    // Add click animations to category items
+    const categoryItems = document.querySelectorAll('.category-item');
+    categoryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Add a slight scale animation
+            this.style.transform = 'translateY(-5px) scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-5px) scale(1)';
+            }, 150);
+        });
+    });
+
+    // Search functionality enhancement
+    const searchInput = document.querySelector('.main-search .search-input');
+    const searchBtn = document.querySelector('.main-search .search-btn');
+    
+    if (searchInput && searchBtn) {
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+                // Add search animation
+                searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Поиск...';
+                setTimeout(() => {
+                    searchBtn.innerHTML = 'Поиск с ИИ';
+                    // Here you would typically handle the search
+                    console.log('Searching for:', searchTerm);
+                }, 1500);
+            }
+        });
+
+        // Enter key search
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+});
 
 // Progressive loading for images
 function lazyLoadImages() {
@@ -443,3 +462,54 @@ if ('performance' in window) {
         }, 0);
     });
 } 
+
+// Header search functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const headerSearchInput = document.querySelector('.header-search-input');
+    const heroSearchInput = document.querySelector('.hero-search .search-input');
+    
+    if (headerSearchInput && heroSearchInput) {
+        // Sync header search with hero search
+        headerSearchInput.addEventListener('input', (e) => {
+            heroSearchInput.value = e.target.value;
+        });
+        
+        // Handle Enter key press
+        headerSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const searchTerm = headerSearchInput.value.trim();
+                if (searchTerm) {
+                    // Scroll to hero search and focus
+                    const heroSection = document.querySelector('.hero-search');
+                    if (heroSection) {
+                        heroSection.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                        setTimeout(() => {
+                            heroSearchInput.focus();
+                        }, 500);
+                    }
+                }
+            }
+        });
+        
+        // Focus effect enhancement
+        headerSearchInput.addEventListener('focus', () => {
+            headerSearchInput.parentElement.style.transform = 'scale(1.02)';
+        });
+        
+        headerSearchInput.addEventListener('blur', () => {
+            headerSearchInput.parentElement.style.transform = 'scale(1)';
+        });
+        
+        // Click handler for header search wrapper
+        const headerSearchWrapper = document.querySelector('.header-search-wrapper');
+        if (headerSearchWrapper) {
+            headerSearchWrapper.addEventListener('click', () => {
+                headerSearchInput.focus();
+            });
+        }
+    }
+});
