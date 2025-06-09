@@ -512,4 +512,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-});
+});// Force cache refresh
